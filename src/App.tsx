@@ -5,8 +5,10 @@ import ProductPage from './components/ProductPage';
 import AboutPage from './components/AboutPage';
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
   return (
-    <Router>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/team" element={<TeamPage />} />
