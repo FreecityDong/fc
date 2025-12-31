@@ -72,8 +72,8 @@ export default function TeamPage() {
           <div className="space-y-12 lg:space-y-[100px]">
             {/* Row 1 - Single member centered - Lin Xuanhao */}
             <div className="flex justify-center">
-              <div className="flex flex-col items-start max-w-[481px]">
-                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden">
+              <div className="flex flex-col items-center text-center max-w-[481px] mx-auto">
+                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden mx-auto">
                   <img 
                     alt={teamMembers[0].name} 
                     className="w-full h-full object-cover" 
@@ -89,53 +89,53 @@ export default function TeamPage() {
 
             {/* Row 2 - Two members - Wei Liaoxuan & Liu Zihang */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-x-[129px]">
-              <div className="flex flex-col items-start">
-                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden">
+              <div className="flex flex-col items-center text-center mx-auto">
+                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden mx-auto">
                   <img 
                     alt={teamMembers[1].name} 
                     className="w-full h-full object-cover" 
                     src={teamMembers[1].image} 
                   />
                 </div>
-                <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[1].name}</h3>
-                <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
-                  {teamMembers[1].description}
-                </p>
-              </div>
+              <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[1].name}</h3>
+              <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
+                {teamMembers[1].description}
+              </p>
+            </div>
 
-              <div className="flex flex-col items-start">
-                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden">
+              <div className="flex flex-col items-center text-center mx-auto">
+                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden mx-auto">
                   <img 
                     alt={teamMembers[2].name} 
                     className="w-full h-full object-cover" 
                     src={teamMembers[2].image} 
                   />
                 </div>
-                <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[2].name}</h3>
-                <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
-                  {teamMembers[2].description}
-                </p>
-              </div>
+              <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[2].name}</h3>
+              <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
+                {teamMembers[2].description}
+              </p>
+            </div>
             </div>
 
             {/* Row 3 - Two members - Wang Tengyi & Wu Jiatong */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-x-[129px]">
-              <div className="flex flex-col items-start">
-                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden">
+              <div className="flex flex-col items-center text-center mx-auto">
+                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden mx-auto">
                   <img 
                     alt={teamMembers[3].name} 
                     className="w-full h-full object-cover" 
                     src={teamMembers[3].image} 
                   />
                 </div>
-                <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[3].name}</h3>
-                <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
-                  {teamMembers[3].description}
-                </p>
-              </div>
+              <h3 className="text-[24px] leading-[50px] font-bold mb-2">{teamMembers[3].name}</h3>
+              <p className="text-[16px] leading-[24px] text-[#333] max-w-[481px] font-medium">
+                {teamMembers[3].description}
+              </p>
+            </div>
 
-              <div className="flex flex-col items-start">
-                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden">
+              <div className="flex flex-col items-center text-center mx-auto">
+                <div className="w-[194px] h-[194px] mb-6 rounded-full overflow-hidden mx-auto">
                   <img 
                     alt={teamMembers[4].name} 
                     className="w-full h-full object-cover" 

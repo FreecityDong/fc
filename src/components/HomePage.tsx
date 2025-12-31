@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import svgPaths from "../imports/svg-8kzcearfgm";
@@ -8,8 +9,34 @@ import imgRectangle5 from "../assets/8fa2b479706536ea6c57ec739959f1dff60b9ed4.pn
 import imgRectangle6 from "../assets/92962c49035aea0cdba44b25ed7ad5615597780e.png";
 import imgRectangle7 from "../assets/8385c9d51e5bfd9a48ddf9d2d2eb3b49d62bd54a.png";
 import imgRectangle8 from "../assets/3aea8d765ba6502bf855bf1541033fb5f39ca21e.png";
+import productVideo from "../assets/video.mp4";
 
 export default function HomePage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!videoEl) return;
+        if (entry.isIntersecting) {
+          videoEl.play().catch(() => {
+            // Ignore autoplay rejection if browser blocks without user gesture
+          });
+        } else {
+          videoEl.pause();
+          videoEl.currentTime = 0;
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoEl);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="bg-white min-h-screen flex flex-col font-['Noto_Sans_SC',sans-serif]">
       <Header />
@@ -79,9 +106,16 @@ export default function HomePage() {
       {/* Product Video - 1200px width, 675px height */}
       <section className="w-full flex justify-center py-12 lg:py-20">
         <div className="w-full max-w-[1200px] px-6 lg:px-0">
-          <div className="bg-black w-full h-[400px] lg:h-[675px] flex items-center justify-center rounded-lg">
-            <p className="capitalize text-white text-[28px] lg:text-[40px] leading-[50px]">此处放产品的视频</p>
-          </div>
+          <video
+            ref={videoRef}
+            className="w-full h-[400px] lg:h-[675px] rounded-lg object-cover bg-black"
+            playsInline
+            controls={false}
+            preload="metadata"
+            src={productVideo}
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
