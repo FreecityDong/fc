@@ -12,3 +12,5 @@
 
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+sk-c413db029a984ed8a0676aa06d626e1f
