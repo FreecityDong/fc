@@ -9,3 +9,6 @@
 
   Run `npm run dev` to start the development server.
   # fruitcore
+
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
